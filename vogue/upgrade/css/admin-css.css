@@ -1,0 +1,169 @@
+.tgm-custom-button {
+    padding: 0 0 5px;
+}
+.tgm-custom-button span {
+    font-size: 16px;
+    color: #000;
+}
+.tgm-custom-button a.tgm-custom-button {
+    display: inline-block;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset !important;
+    background-color: #006CC9;
+    color: #FFF !important;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0 0 0 5px;
+    padding: 4px 10px;
+    text-decoration: none;
+}
+.tgm-custom-button a.tgm-custom-button:hover {
+    background-color: #0952A9;
+}
+
+.notice.vogue-notice-layouts {
+    position: relative;
+}
+.notice.vogue-notice-layouts p {
+    font-size: 16px;
+}
+.notice.vogue-notice-layouts a.vogue-noticemiss {
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    font-size: 11px;
+}
+.notice.vogue-notice-layouts i {
+    color: #006CC9;
+}
+
+/* ---- Category ID Column ---- */
+.cat_id_note {
+    display: block;
+    font-size: 10px;
+    color: #999;
+}
+.column-cat_id {
+    width: 15%;
+}
+
+/* ---- Show / Hide Widget areas ---- */
+body.vogue-footer-layout-social.widgets-php #vogue-site-footer-standard {
+    display: none !important;
+}
+
+body.widgets-php .widgets-holder-wrap {
+    box-shadow: none;
+    border: 0;
+}
+
+body.widgets-php #sidebar-1,
+body.vogue-footer-layout-standard.widgets-php #vogue-site-footer-standard {
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+/* ---- Dashboard Notice ---- */
+.vogue-admin-notice {
+    position: relative;
+    padding: 20px 15px;
+}
+.vogue-notice-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #ababab;
+    font-size: 11px;
+    text-decoration: none;
+}
+.vogue-notice-close::after {
+    background: 0 0;
+    color: #72777c;
+    content: "\f153";
+    font: 400 16px/20px dashicons;
+    height: 20px;
+    text-align: center;
+    position: relative;
+    top: 4px;
+    margin: 0 0 0 4px;
+    width: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.vogue-notice-close:hover::after {
+    color: #c00;
+}
+
+.vogue-admin-notice h3,
+.vogue-admin-notice h5 {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    font-weight: 500;
+}
+.vogue-admin-notice p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    line-height: 2.2;
+}
+.vogue-admin-notice .vogue-admin-notice-btn {
+    background-color: #eaeaea;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    margin: 0;
+    padding: 4px 10px 6px;
+    text-decoration: none;
+    color: #000;
+}
+.vogue-admin-notice .vogue-admin-notice-btn:hover {
+    background-color: #b8e7ff;
+    border-color: #79a4ef;
+    color: #09057d;
+}
+.vogue-admin-notice a:hover {
+    color: #1a98cc;
+}
+
+.vogue-admin-notice-blocks {
+    display: flex;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 10px 0 20px;
+}
+.vogue-admin-notice-block {
+    flex: 1;
+    padding: 18px 25px 25px 0;
+}
+.vogue-admin-notice-block h5 {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+.vogue-admin-notice-block p {
+    line-height: 1.6;
+    margin: 10px 0 20px;
+}
+.vogue-admin-notice-block ul {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.vogue-admin-notice.vogue-notice-blockons {
+    display: flex;
+    align-items: center;
+}
+.vogue-notice-blockons h4 {
+    color: #222;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0 0 5px;
+}
+.vogue-notice-blockons p {
+    margin: -1px 0 5px;
+    line-height: 1.6;
+}
+.vogue-notice-blockons img {
+    margin: 4px 6px -6px -5px;
+}
