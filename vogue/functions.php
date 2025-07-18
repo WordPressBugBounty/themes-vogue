@@ -4,7 +4,7 @@
  *
  * @package Vogue
  */
-define( 'VOGUE_THEME_VERSION' , '1.4.75' );
+define( 'VOGUE_THEME_VERSION' , '1.4.76' );
 
 // Get help / Premium Page
 require get_template_directory() . '/upgrade/upgrade.php';
@@ -398,30 +398,15 @@ function vogue_register_required_plugins() {
 			'required'  => false,
 		),
 		array(
-			'name'      => __( 'Contact Form by WPForms', 'vogue' ),
-			'slug'      => 'wpforms-lite',
-			'required'  => false,
-		),
-		array(
 			'name'      => __( 'Blockons - Editor blocks', 'vogue' ),
 			'slug'      => 'blockons',
 			'required'  => false,
 		),
 		array(
-			'name'      => __( 'Breadcrumb NavXT', 'vogue' ),
-			'slug'      => 'breadcrumb-navxt',
+			'name'      => __( 'Theme Site Kit - Toolkit', 'vogue' ),
+			'slug'      => 'theme-site-kit',
 			'required'  => false,
 		),
-		array(
-			'name'      => __( 'All in One SEO', 'vogue' ),
-			'slug'      => 'all-in-one-seo-pack',
-			'required'  => false,
-		),
-		array(
-			'name'      => __( 'Google Analytics for WordPress by MonsterInsights', 'vogue' ),
-			'slug'      => 'google-analytics-for-wordpress',
-			'required'  => false,
-		)
 	);
 	$config = array(
 		'id'           => 'vogue',
@@ -568,19 +553,14 @@ function vogue_blockons_notice() {
 	global $current_user;
 	$vogue_user_id = $current_user->ID;
 
-	if ( !get_user_meta( $vogue_user_id, 'vogue_blockons_dismiss' ) ) : ?>
+	if ( !get_user_meta( $vogue_user_id, 'vogue_plugins_dismiss' ) ) : ?>
 		<div class="notice notice-info vogue-admin-notice vogue-notice-blockons">
 			<div>
-				<a href="<?php echo esc_url(admin_url('/plugin-install.php?s=blockons&tab=search&type=term')); ?>">
-					<img src="<?php echo esc_url(get_template_directory_uri() . '/images/blockons-logo.png'); ?>" alt="Blockons" />
-				</a>
+				<h4><?php esc_html_e( 'Try out our new Plugins, the only two you need to build your entire website with ease and flexibility!', 'vogue' ); ?></h4>
+				<p><?php esc_html_e( 'We’ve just launched our powerful toolkit plugins — the only plugins you’ll need to build a complete website, packed with advanced blocks like contact forms, maps, sliders, image galleries, SVG uploads, maintenance mode, comment controls, and so much more!', 'vogue' ); ?></p>
+				<a href="<?php echo esc_url(admin_url('/plugin-install.php?s=blockons&tab=search&type=term')); ?>"><?php esc_html_e( 'View the plugins', 'vogue' ); ?></a>
 			</div>
-			<div>
-				<h4><?php esc_html_e( 'Try out the new Blockons Plugin !', 'vogue' ); ?></h4>
-				<p><?php esc_html_e( 'Blockons offers advanced WordPress blocks for your Editor, as well as Site Addons such as page loader, page scroll indicator & back to top button... Great for building beautiful pages! More features coming soon!', 'vogue' ); ?></p>
-				<a href="<?php echo esc_url(admin_url('/plugin-install.php?s=blockons&tab=search&type=term')); ?>"><?php esc_html_e( 'View the Blockons plugin', 'vogue' ); ?></a>
-			</div>
-			<a href="?vogue_blockons_notice_ignore=" class="vogue-notice-close"><?php esc_html_e( 'Dismiss Notice', 'vogue' ); ?></a>
+			<a href="?vogue_plugins_notice_ignore=" class="vogue-notice-close"><?php esc_html_e( 'Dismiss Notice', 'vogue' ); ?></a>
 		</div><?php
 	endif;
 }
@@ -592,8 +572,8 @@ function vogue_blockons_notice_ignore() {
     global $current_user;
 	$vogue_user_id = $current_user->ID;
 
-    if ( isset( $_GET['vogue_blockons_notice_ignore'] ) ) {
-		update_user_meta( $vogue_user_id, 'vogue_blockons_dismiss', true );
+    if ( isset( $_GET['vogue_plugins_notice_ignore'] ) ) {
+		update_user_meta( $vogue_user_id, 'vogue_plugins_dismiss', true );
     }
 }
 add_action( 'admin_init', 'vogue_blockons_notice_ignore' );
