@@ -4,7 +4,7 @@
  *
  * @package Vogue
  */
-define( 'VOGUE_THEME_VERSION' , '1.4.76' );
+define( 'VOGUE_THEME_VERSION' , '1.4.77' );
 
 // Get help / Premium Page
 require get_template_directory() . '/upgrade/upgrade.php';
@@ -549,31 +549,37 @@ add_action( 'admin_init', 'vogue_add_license_notice_ignore' );
 /**
  * Admin notice for Blockons
  */
-function vogue_blockons_notice() {
+function vogue_invoplex_notice() {
 	global $current_user;
 	$vogue_user_id = $current_user->ID;
 
-	if ( !get_user_meta( $vogue_user_id, 'vogue_plugins_dismiss' ) ) : ?>
+	if ( !get_user_meta( $vogue_user_id, 'vogue_invoplex_dismiss' ) ) : ?>
 		<div class="notice notice-info vogue-admin-notice vogue-notice-blockons">
 			<div>
-				<h4><?php esc_html_e( 'Try out our new Plugins, the only two you need to build your entire website with ease and flexibility!', 'vogue' ); ?></h4>
-				<p><?php esc_html_e( 'We’ve just launched our powerful toolkit plugins — the only plugins you’ll need to build a complete website, packed with advanced blocks like contact forms, maps, sliders, image galleries, SVG uploads, maintenance mode, comment controls, and so much more!', 'vogue' ); ?></p>
-				<a href="<?php echo esc_url(admin_url('/plugin-install.php?s=blockons&tab=search&type=term')); ?>"><?php esc_html_e( 'View the plugins', 'vogue' ); ?></a>
+				<a href="<?php echo esc_url("https://app.invoplex.com/auth/sign-up"); ?>" target="_blank">
+					<img src="<?php echo esc_url(get_template_directory_uri() . '/images/invoplex-logo.png'); ?>" alt="Blockons" style="width: 120px; height: auto;" />
+				</a>
+			</div>
+			<div>
+				<h4 style="font-size: 18px;"><?php esc_html_e( 'Simplify Invoicing. Get Paid Faster !', 'overlay' ); ?></h4>
+				<p><?php esc_html_e( "Built for Small Businesses, Freelancers, creators, self-employed solopreneurs or any service-based business.", "overlay" ); ?></p>
+				<p><?php esc_html_e( "Invoplex let's you build quotes and invoices as you see them, convert them, mark them as sent or approved, as well as tracking payment and managing your clients.", "overlay" ); ?></p>
+				<a href="<?php echo esc_url("https://app.invoplex.com/auth/sign-up"); ?>" target="_blank"><?php esc_html_e( 'Get Started with Invoplex', 'overlay' ); ?></a>
 			</div>
 			<a href="?vogue_plugins_notice_ignore=" class="vogue-notice-close"><?php esc_html_e( 'Dismiss Notice', 'vogue' ); ?></a>
 		</div><?php
 	endif;
 }
-add_action( 'admin_notices', 'vogue_blockons_notice' );
+add_action( 'admin_notices', 'vogue_invoplex_notice' );
 /**
  * Admin notice dismiss for Blockons
  */
-function vogue_blockons_notice_ignore() {
+function vogue_invoplex_notice_ignore() {
     global $current_user;
 	$vogue_user_id = $current_user->ID;
 
     if ( isset( $_GET['vogue_plugins_notice_ignore'] ) ) {
-		update_user_meta( $vogue_user_id, 'vogue_plugins_dismiss', true );
+		update_user_meta( $vogue_user_id, 'vogue_invoplex_dismiss', true );
     }
 }
-add_action( 'admin_init', 'vogue_blockons_notice_ignore' );
+add_action( 'admin_init', 'vogue_invoplex_notice_ignore' );

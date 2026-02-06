@@ -3,7 +3,7 @@ Contributors: Kaira
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PFZGBM92T8XSE&source=url
 Tags: two-columns, three-columns, four-columns, left-sidebar, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-image-header, featured-images, footer-widgets, full-width-template, theme-options, threaded-comments, translation-ready, blog, e-commerce, news
 Requires at least: 4.7
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -66,6 +66,10 @@ View the theme settings under "Appearance" -> Customize.
 1. Featured Images work best at a minimum of 1100 wide and 420 high.
 
 == Changelog ==
+
+#### 1.4.77
+* Style fixes/tweaks
+* Version compatibility for WP 6.9
 
 #### 1.4.76
 * Style fixes/tweaks

@@ -4,8 +4,8 @@ Theme URI: https://kairaweb.com/wordpress-theme/vogue/
 Author: Kaira
 Author URI: https://kairaweb.com/
 Description: Vogue is a very loved and easy to use WordPress theme that is ready for your next project. Build with SEO (Search Engine Optimization) settings, fully responsive and fast loading, Vogue offers multiple header layouts, custom WooCommerce design, multiple footer layouts, multiple blog layouts and a bunch of extra layout customization and full color settings, all built neatly into the WordPress Customizer. This makes Vogue very extensible for developers to customize and very easy for non-developers/designers to build a professional website. With Vogue you can easily build any type of website such as a blog, portfolio, business website and WooCommerce storefront with a beautiful & professional design. Works with the most popular page builders such as Elementor, Beaver Builder, Visual Composer, Divi, SiteOrigin and other top free plugins. Look no further... Give Vogue a go :) View the Vogue Demo – https://demo.kairaweb.com/#vogue
-Version: 1.4.76
-Tested up to: 6.8
+Version: 1.4.77
+Tested up to: 6.9
 Requires PHP: 7.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -523,8 +523,7 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
   border-color: #aaa #bbb #bbb;
-  box-shadow:
-    inset 0 -1px 0 rgba(255, 255, 255, 0.5),
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5),
     inset 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
@@ -1831,9 +1830,7 @@ footer.comment-meta {
   padding: 0 0 30px;
 }
 .comments-area.vogue-comment-form-top .comment-respond {
-  box-shadow:
-    0 1px 0 rgba(0, 0, 0, 0.1),
-    0 -1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.1);
   margin: 30px 0 30px;
   padding: 30px 0 20px;
 }
